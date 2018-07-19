@@ -1290,6 +1290,10 @@ class TestDataFrameFormatting(object):
                         '1  2.512000e-01')
         assert df_s == expected
 
+        df = DataFrame({'x': [1.999]})
+        expected = ('     x\n0 2.00')
+        assert df.to_string(float_format='%.2f') == expected
+
     def test_to_string_small_float_values(self):
         df = DataFrame({'a': [1.5, 1e-17, -5.5e-7]})
 
