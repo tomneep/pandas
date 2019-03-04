@@ -593,7 +593,8 @@ b &       b &     b \\
         )
 
         expected_cl = r"""\begin{longtable}{lrl}
-\caption{a table in a \texttt{longtable} environment}\label{tab:longtable}\\
+\caption{a table in a \texttt{longtable} environment}
+\label{tab:longtable}\\
 \toprule
 {} &  a &   b \\
 \midrule
